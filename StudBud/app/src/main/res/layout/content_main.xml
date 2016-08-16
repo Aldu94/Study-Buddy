@@ -11,7 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.aldu.studbud.MainActivity"
-    >
+    android:background="#050505">
 
     <TextView
         android:layout_width="match_parent"
@@ -22,11 +22,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#050505"
         android:textSize="30dp"
         android:textStyle="bold"
         android:layout_weight="0"
-        />
+        android:background="#2da851" />
     <TableLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -43,14 +43,16 @@
             android:layout_weight="0.5"
             android:text="@string/title_schedule_button"
             android:id="@+id/schedule_button"
-             />
+            android:background="#2da851"
+            android:layout_margin="5dp" />
     <Button
         android:layout_width="0dp"
         android:layout_height="175dp"
         android:layout_weight="0.5"
         android:text="@string/title_calculator_button"
         android:id="@+id/calculator_button"
-        />
+        android:background="#2da851"
+        android:layout_margin="5dp" />
 </TableRow>
         <TableRow>
 
@@ -60,7 +62,8 @@
                 android:layout_weight="0.5"
                 android:text="@string/title_profile_button"
                 android:id="@+id/profile_button"
-                />
+                android:background="#2da851"
+                android:layout_margin="5dp" />
 
         <Button
             android:layout_width="0dp"
@@ -68,7 +71,8 @@
             android:layout_weight="0.5"
             android:text="@string/title_preferences_button"
             android:id="@+id/preferences_button"
-             />
+            android:background="#2da851"
+            android:layout_margin="5dp" />
 
 
         </TableRow>
