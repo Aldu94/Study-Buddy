@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setupUI();
         onStundenplanClicked();
+        onNotenrechnerClicked();
+        onProfilClicked();
+        onEinstellungenClicked();
 
     }
     // setup buttons on main screen
@@ -39,6 +42,36 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this,Stundenplan.class);
                 startActivity(i);
+            }
+        });
+    }
+
+    private void onNotenrechnerClicked(){
+        notenRechner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nrIntent = new Intent(MainActivity.this,Notenrechner.class);
+                startActivity(nrIntent);
+            }
+        });
+    }
+
+    private void onProfilClicked(){
+        profil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profilIntent = new Intent(MainActivity.this,Profil.class);
+                startActivity(profilIntent);
+            }
+        });
+    }
+
+    private void onEinstellungenClicked(){
+        einstellungen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent einstellungenIntent = new Intent(MainActivity.this,Einstellungen.class);
+                startActivity(einstellungenIntent);
             }
         });
     }
