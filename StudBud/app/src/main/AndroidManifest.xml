@@ -21,6 +21,18 @@
         <activity
             android:name=".Stundenplan"
             android:label="@string/title_activity_stundenplan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Notenrechner"
+            android:label="@string/title_activity_notenrechner"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".profil"
+            android:label="@string/title_activity_profil"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Einstellungen"
+            android:label="@string/title_activity_einstellungen"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
