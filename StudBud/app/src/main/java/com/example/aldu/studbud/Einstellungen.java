@@ -1,4 +1,4 @@
-package com.example.aldu.studbud;
+package java.main.com.example.aldu.studbud;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,8 +12,8 @@ public class Einstellungen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_einstellungen);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setContentView(com.example.aldu.studbud.R.layout.activity_einstellungen);
+        Toolbar toolbar = (Toolbar) findViewById(com.example.aldu.studbud.R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
