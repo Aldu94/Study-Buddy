@@ -19,19 +19,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Stundenplan"
+            android:name=".Schedule"
             android:label="@string/title_activity_stundenplan"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Notenrechner"
+            android:name=".MarksCalculator"
             android:label="@string/title_activity_notenrechner"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
-            android:name=".Einstellungen"
-            android:label="@string/title_activity_einstellungen"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Profil"
+            android:name=".Profile"
             android:label="@string/title_activity_profil"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
