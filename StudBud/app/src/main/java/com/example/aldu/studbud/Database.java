@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 import main.java.com.example.aldu.studbud.domain.CourseItem;
 
-public class CourseItemRepository {
+public class Database {
     private static final String DATABASE_NAME = "courseData.db";
     private static final int DATABASE_VERSION = 1;
 
@@ -35,7 +35,7 @@ public class CourseItemRepository {
     private SQLiteDatabase db;
     public String[] referenceArray;
 
-    public CourseItemRepository(Context context) {
+    public Database(Context context) {
         dbHelper = new FoodieDBOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
     /* ermöglicht es anderen Klassen, die Datenbank zu öffnen */
