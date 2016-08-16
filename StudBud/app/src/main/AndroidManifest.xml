@@ -33,6 +33,10 @@
         <activity
             android:name=".Profil"
             android:label="@string/title_activity_profil"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Preferences"
+            android:label="@string/title_activity_preferences"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

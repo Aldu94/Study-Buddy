@@ -2,10 +2,13 @@ package com.example.aldu.studbud;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     private Button notenRechner;
     private Button profil;
     private Button einstellungen;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         onStundenplanClicked();
         onNotenrechnerClicked();
         onProfilClicked();
-        onEinstellungenClicked();
+        onPreferencesClicked();
 
     }
     // setup buttons on main screen
@@ -64,11 +66,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void onEinstellungenClicked(){
+    private void onPreferencesClicked(){
         einstellungen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent einstellungenIntent = new Intent(MainActivity.this,Einstellungen.class);
+                Intent einstellungenIntent = new Intent(MainActivity.this,Preferences.class);
                 startActivity(einstellungenIntent);
             }
         });
