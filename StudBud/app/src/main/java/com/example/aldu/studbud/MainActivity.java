@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button notenRechner;
     private Button profil;
     private Button einstellungen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
