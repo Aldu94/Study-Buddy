@@ -1,4 +1,4 @@
-package main.java.com.example.aldu.studbud;
+package com.example.aldu.studbud;
 
 /**
  * Created by Der Bar.de on 16.08.2016.
@@ -25,6 +25,7 @@ public class Database {
     private static final String KEY_NAME = "name";
     private static final String KEY_ID = "_id";
     private static final String KEY_RATING = "rating";
+    private static final String KEY_STATUS ="status";
 
     /* Hier werden die Spalten Nummern vergeben */
     public static final int COLUMN_NAME_INDEX = 1;
@@ -99,8 +100,8 @@ public class Database {
 //        return 0;
 //    }
     /* Löscht einen Eintrag aus der Datenbank, wenn die Methode aufgerufen wird*/
-    public long deleteFoodieItem(String foodieItemID) {
-        String whereClause = KEY_ID + " = '" + foodieItemID;
+    public long deleteCourseItem(String courseItemID) {
+        String whereClause = KEY_ID + " = '" + courseItemID;
         db.delete(DATABASE_TABLE, whereClause, null);
         return 0;
     }
@@ -117,7 +118,7 @@ public class Database {
     /* Der FoodieDBOpenHelper erstellt eine Datenbank mit den gewünschten Spalten und dem Datenbanknamen*/
     private class FoodieDBOpenHelper extends SQLiteOpenHelper {
         private static final String DATABASE_CREATE = "create table "
-                + DATABASE_TABLE + " (" +KEY_ID + " integer primary key autoincrement, " + KEY_NAME + " text," + KEY_PATH + " text," + KEY_RATING + " text);";
+                + DATABASE_TABLE + " (" +KEY_ID + " integer primary key autoincrement, " + KEY_NAME + " text," + KEY_STATUS + " text," + KEY_RATING + " text);";
 
         public FoodieDBOpenHelper(Context context, String dbname, SQLiteDatabase.CursorFactory factory, int version){
             super(context, dbname, factory, version);
@@ -134,4 +135,5 @@ public class Database {
         }
 
     }
+
 }

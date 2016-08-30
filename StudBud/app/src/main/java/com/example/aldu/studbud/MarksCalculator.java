@@ -9,21 +9,35 @@ import android.view.View;
 
 public class MarksCalculator extends AppCompatActivity {
 
+
+    private static final int INFWISS_ID = 0;
+    private static final int MEDINFO_ID = 1;
+    private int id;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_markscalculator);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        calculateMarks();
+    }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+    private void calculateMarks(){
+        if(id == INFWISS_ID){
+            calculateInfwissAsMainSubject();
+        }
+        else{
+            calculateMedInfoAsMainSubject();
+        }
+    }
+
+
+    private void calculateInfwissAsMainSubject(){
+
+    }
+
+    private void calculateMedInfoAsMainSubject() {
+
     }
 
 }
