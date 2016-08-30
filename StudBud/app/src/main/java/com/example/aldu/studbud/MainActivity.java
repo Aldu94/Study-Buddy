@@ -2,11 +2,16 @@ package com.example.aldu.studbud;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Debug;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+
+import com.example.aldu.studbud.domain.CourseItem;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +19,11 @@ public class MainActivity extends AppCompatActivity {
     private Button calculatorButton;
     private Button profileButton;
     private Button preferencesButton;
+
+    private Database db = new Database(MainActivity.this);
+    private CourseItem INF1 = new CourseItem("INF-M01.1","bestanden","2.3");
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +33,17 @@ public class MainActivity extends AppCompatActivity {
         onCalculatorClicked();
         onProfileClicked();
         onPreferencesClicked();
+        Log.d("First", "Now open Database");
+        db.open();
+        Log.d("Second", "Database is open");
+        db.addCourseItem(INF1);
+        Log.d("Third", "Course Item is added");
+        Log.d("Test"," " + db.getNumberOfImages());
+        db.close();
+        Log.d("Fourth","Database is closed now");
 
     }
+
     // setup buttons on main screen
     private void setupUI(){
         scheduleButton = (Button)findViewById(R.id.schedule_button);

@@ -1,4 +1,4 @@
-package main.java.com.example.aldu.studbud.domain;
+package com.example.aldu.studbud.domain;
 
 /**
  * Created by Der Bar.de on 16.08.2016.
@@ -8,6 +8,7 @@ public class CourseItem implements Comparable<CourseItem>{
     private String rating;
     private String name;
     private String path;
+    private String status;
 
     public CourseItem(String name, String path, String rating){
         this.name = name;
@@ -48,6 +49,9 @@ public class CourseItem implements Comparable<CourseItem>{
         return getName().compareTo(another.getName());
     }
 
+    public String getStatus() {
+        return status;
+    }
 }
 
 

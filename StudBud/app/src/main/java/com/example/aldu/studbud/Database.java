@@ -13,7 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 
-import main.java.com.example.aldu.studbud.domain.CourseItem;
+import com.example.aldu.studbud.domain.CourseItem;
 
 public class Database {
     private static final String DATABASE_NAME = "courseData.db";
@@ -29,7 +29,7 @@ public class Database {
 
     /* Hier werden die Spalten Nummern vergeben */
     public static final int COLUMN_NAME_INDEX = 1;
-    public static final int COLUMN_PATH_INDEX = 2;
+    public static final int COLUMN_STATUS_INDEX = 2;
     public static final int COLUMN_RATING_INDEX = 3;
 
     private FoodieDBOpenHelper dbHelper;
@@ -53,27 +53,27 @@ public class Database {
     }
 
     /* Legt ein FoodieItem in der Datenbank mit den Informationen KEY_NAME, KEY_PATH, KEY_RATING ab */
-    public long addFoodieItem(CourseItem item) {
-        ContentValues newFoodieValues = new ContentValues();
+    public long addCourseItem(CourseItem item) {
+        ContentValues newCourseValue = new ContentValues();
 
-        newFoodieValues.put(KEY_NAME, item.getName());
-        newFoodieValues.put(KEY_PATH, item.getPath());
-        newFoodieValues.put(KEY_RATING, item.getRating());
+        newCourseValue.put(KEY_NAME, item.getName());
+        newCourseValue.put(KEY_STATUS, item.getStatus());
+        newCourseValue.put(KEY_RATING, item.getRating());
 
-        return db.insert(DATABASE_TABLE, null, newFoodieValues);
+        return db.insert(DATABASE_TABLE, null, newCourseValue);
     }
     /*gibt eine ArrayList mit allen FoodieItems und den entsprechenden Werten aus der Datenbank zurück*/
-    public ArrayList<CourseItem> getAllFoodieItems() {
+    public ArrayList<CourseItem> getAllCourseItems() {
         ArrayList<CourseItem> courseItems = new ArrayList<CourseItem>();
-        Cursor cursor = db.query(DATABASE_TABLE, new String[] { KEY_ID, KEY_NAME, KEY_PATH, KEY_RATING }, null, null, null, null, null);
+        Cursor cursor = db.query(DATABASE_TABLE, new String[] { KEY_ID, KEY_NAME, KEY_STATUS, KEY_RATING }, null, null, null, null, null);
 
         if (cursor.moveToFirst()) {
             do {
                 String name = cursor.getString(COLUMN_NAME_INDEX);
-                String path = cursor.getString(COLUMN_PATH_INDEX);
+                String status = cursor.getString(COLUMN_STATUS_INDEX);
                 String rating = cursor.getString(COLUMN_RATING_INDEX);
 
-                courseItems.add(new CourseItem(name, path, rating));
+                courseItems.add(new CourseItem(name, status, rating));
             } while (cursor.moveToNext());
         }
         cursor.close();
@@ -81,10 +81,10 @@ public class Database {
     }
     /*Erstellt einen String Array, der die Pfade der in der Datenbank abgelegten Bilder speichert*/
     public String[] referenceArray(){
-        Cursor cursor = db.query(DATABASE_TABLE, new String[] {KEY_PATH}, null, null, null, null, null);
+        Cursor cursor = db.query(DATABASE_TABLE, new String[] {KEY_STATUS}, null, null, null, null, null);
         cursor.moveToFirst();
         for(int i = 0; i <= getNumberOfImages()-1; i++){
-            String filepath = cursor.getString(COLUMN_PATH_INDEX);
+            String filepath = cursor.getString(COLUMN_STATUS_INDEX);
             referenceArray[i] = filepath;
             cursor.moveToNext();
         }
@@ -110,7 +110,7 @@ public class Database {
         String countQuery = "Select * FROM " + DATABASE_TABLE;
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
-        cursor.close();
+        //cursor.close();
 
         return cursor.getCount();
     }

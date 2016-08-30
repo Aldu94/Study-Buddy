@@ -1,10 +1,10 @@
-package main.java.com.example.aldu.studbud.persistence;
+package com.example.aldu.studbud.persistence;
 
 /**
  * Created by Der Bar.de on 16.08.2016.
  */
 import java.util.ArrayList;
-import main.java.com.example.aldu.studbud.domain.CourseItem;
+import com.example.aldu.studbud.domain.CourseItem;
 
 public class Repository {
 

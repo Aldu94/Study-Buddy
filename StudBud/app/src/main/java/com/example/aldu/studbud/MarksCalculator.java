@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 public class MarksCalculator extends AppCompatActivity {
 
@@ -14,12 +15,14 @@ public class MarksCalculator extends AppCompatActivity {
     private static final int MEDINFO_ID = 1;
     private int id;
 
+    private Database db = new Database(MarksCalculator.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_markscalculator);
-        calculateMarks();
+        Toast.makeText(MarksCalculator.this, "sers" , Toast.LENGTH_SHORT).show();
+        //calculateMarks();
     }
 
     private void calculateMarks(){
@@ -33,7 +36,6 @@ public class MarksCalculator extends AppCompatActivity {
 
 
     private void calculateInfwissAsMainSubject(){
-
     }
 
     private void calculateMedInfoAsMainSubject() {
