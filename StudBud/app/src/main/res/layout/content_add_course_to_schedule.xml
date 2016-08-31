@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AddCourseToSchedule"
+    tools:showIn="@layout/activity_add_course_to_schedule"
+    android:background="#000000">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_course_title"
+        android:id="@+id/course_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:height="40dp"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="#1abc9c" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_text"
+        android:layout_below="@+id/course_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/course_title"
+        android:layout_alignEnd="@+id/course_title"
+        android:textColor="#1abc9c"
+        android:backgroundTint="#1abc9c" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_start_time"
+        android:id="@+id/start_time"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title_text"
+        android:layout_alignRight="@+id/title_text"
+        android:layout_alignEnd="@+id/title_text"
+        android:height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#1abc9c" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start_time_text"
+        android:inputType="time"
+        android:layout_below="@+id/start_time"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:width="150dp"
+        android:layout_alignRight="@+id/start_time"
+        android:layout_alignEnd="@+id/start_time"
+        android:textColor="#1abc9c"
+        android:backgroundTint="#1abc9c" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_end_time"
+        android:id="@+id/end_time"
+        android:layout_below="@+id/start_time_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/start_time_text"
+        android:layout_alignEnd="@+id/start_time_text"
+        android:layout_marginTop="20dp"
+        android:height="40dp"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="#1abc9c" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/end_time_text"
+        android:layout_below="@+id/end_time"
+        android:layout_alignRight="@+id/end_time"
+        android:layout_alignEnd="@+id/end_time"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#1abc9c"
+        android:backgroundTint="#1abc9c" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_add_course"
+        android:id="@+id/add_course_button"
+        android:layout_below="@+id/end_time_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="73dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="25dp"
+        android:background="#1abc9c" />
+
+</RelativeLayout>

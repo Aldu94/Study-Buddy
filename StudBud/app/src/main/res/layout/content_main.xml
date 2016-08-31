@@ -26,7 +26,7 @@
         android:textSize="30dp"
         android:textStyle="bold"
         android:layout_weight="0"
-        android:background="#2da851" />
+        android:background="#1abc9c" />
     <TableLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
             android:layout_weight="0.5"
             android:text="@string/title_schedule_button"
             android:id="@+id/schedule_button"
-            android:background="#2da851"
+            android:background="#1abc9c"
             android:layout_margin="5dp" />
     <Button
         android:layout_width="0dp"
@@ -51,7 +51,7 @@
         android:layout_weight="0.5"
         android:text="@string/title_calculator_button"
         android:id="@+id/calculator_button"
-        android:background="#2da851"
+        android:background="#1abc9c"
         android:layout_margin="5dp" />
 </TableRow>
         <TableRow>
@@ -62,7 +62,7 @@
                 android:layout_weight="0.5"
                 android:text="@string/title_profile_button"
                 android:id="@+id/profile_button"
-                android:background="#2da851"
+                android:background="#1abc9c"
                 android:layout_margin="5dp" />
 
         <Button
@@ -71,7 +71,7 @@
             android:layout_weight="0.5"
             android:text="@string/title_preferences_button"
             android:id="@+id/preferences_button"
-            android:background="#2da851"
+            android:background="#1abc9c"
             android:layout_margin="5dp" />
 
 

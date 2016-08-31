@@ -10,5 +10,10 @@
     <string name="title_calculator_button">Calculator</string>
     <string name="title_profile_button">Profile</string>
     <string name="title_preferences_button">Preferences</string>
+    <string name="title_activity_add_course_to_schedule">addCourseToSchedule</string>
+    <string name="title_course_title">Course title</string>
+    <string name="title_start_time">Start time</string>
+    <string name="title_end_time">End time</string>
+    <string name="title_add_course">Add</string>
 
 </resources>

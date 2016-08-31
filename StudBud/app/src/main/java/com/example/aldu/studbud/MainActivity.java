@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         scheduleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Schedule.class);
-                startActivity(i);
+                Intent scheduleIntent = new Intent(MainActivity.this, Schedule.class);
+                startActivity(scheduleIntent);
             }
         });
     }
@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         calculatorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nrIntent = new Intent(MainActivity.this, MarksCalculator.class);
-                startActivity(nrIntent);
+                Intent calculatorIntent = new Intent(MainActivity.this, MarksCalculator.class);
+                startActivity(calculatorIntent);
             }
         });
     }
@@ -72,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent profilIntent = new Intent(MainActivity.this, Profile.class);
-                startActivity(profilIntent);
+                Intent profileIntent = new Intent(MainActivity.this, Profile.class);
+                startActivity(profileIntent);
             }
         });
     }
@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
         preferencesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent einstellungenIntent = new Intent(MainActivity.this, Preferences.class);
-                startActivity(einstellungenIntent);
+                Intent preferencesIntent = new Intent(MainActivity.this, Preferences.class);
+                startActivity(preferencesIntent);
             }
         });
     }
