@@ -1,8 +1,14 @@
 package com.example.aldu.studbud;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
+
+import static android.content.Intent.getIntent;
+
 
 /**
  * Created by Aldu on 31.08.16.
@@ -16,22 +22,23 @@ public class Calculator {
     private static final String KEY_CHOSEN_MODULE_5 = "INF5";
     private static final String KEY_CHOSEN_MODULE_6 = "INF6";
 
+    private MarksCalculator mc;
 
-    public double calculateMarks(int subjectID){
+
+    public double calculateMarks(int subjectID, double inf01){
         if(subjectID == INFWISS_ID){
-            return calculateInfwissAsMainSubject();
+            return calculateInfwissAsMainSubject(inf01);
         }
         else{
-            return calculateMedInfoAsMainSubject();
+            return calculateMedInfoAsMainSubject(inf01);
         }
     }
 
-
-    private double calculateInfwissAsMainSubject(){
+    private double calculateInfwissAsMainSubject(double inf01){
         DecimalFormat df = new DecimalFormat("#0.0");
         double markBachelorInfWiss = 4.0;
 
-        double inf1 = calculateInfwissM01() * 0.1;
+        double inf1 = calculateInfwissM01(inf01) * 0.1;
         double inf2 = calculateInfwissM02() * 0.1;
         double med10 = calculateMediInfoM10() * 0.1;
         double inf4 = calculateInfwissM04() * 0.15;
@@ -47,7 +54,7 @@ public class Calculator {
         return finalMark;
     }
 
-    private double calculateMedInfoAsMainSubject() {
+    private double calculateMedInfoAsMainSubject(double inf01) {
         DecimalFormat df = new DecimalFormat("#0.0");
         double markBachelorMedInfo = 4.0;
 
@@ -57,17 +64,17 @@ public class Calculator {
         double med10 = calculateMediInfoM10() * 0.25;
 
         double markMedInfo = (med3 + med4 + med5 + med10) * 0.5;
-        double markInfWiss = calculateInfWissAsSecondSubject();
+        double markInfWiss = calculateInfWissAsSecondSubject(inf01);
 
         double finalMark = markMedInfo + markInfWiss + (markBachelorMedInfo * 0.2);
 
         return finalMark;
     }
 
-    private double calculateInfWissAsSecondSubject(){
+    private double calculateInfWissAsSecondSubject(double inf01){
         String chosenModuleOne = "INF4";
         String chosenModuleTwo = "INF5";
-        double inf1 = calculateInfwissM01() * 0.25;
+        double inf1 = calculateInfwissM01(inf01) * 0.25;
         double inf2 = calculateInfwissM02() * 0.25;
         double chosenModuleInf4 = calculateInfwissM04() * 0.25;
         double chosenModuleInf5 = calculateInfwissM05() * 0.25;
@@ -115,8 +122,12 @@ public class Calculator {
         return mark;
     }
 
-    private double calculateInfwissM01(){
-        return 3.0;
+    private double calculateInfwissM01(double inf01){
+
+        double markInf11 = inf01 * 0.5;
+        double markInf12 = inf01 * 0.5;
+        Log.d("INF01",String.valueOf(markInf11));
+        return markInf11 + markInf12;
     }
 
     private double calculateInfwissM02(){
@@ -165,4 +176,6 @@ public class Calculator {
     private double calculateMediInfoM10(){
         return 1.0;
     }
+
+
 }

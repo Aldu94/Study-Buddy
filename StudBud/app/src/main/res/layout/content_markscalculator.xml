@@ -45,4 +45,40 @@
         android:layout_alignParentEnd="true"
         android:width="75dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informationstechnische Grundlagen"
+        android:id="@+id/course2"
+        android:layout_below="@+id/scrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/mark1"
+        android:layout_toStartOf="@+id/mark1"
+        android:layout_marginTop="15dp"
+        android:layout_alignBottom="@+id/mark2"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/mark2"
+        android:width="75dp"
+        android:layout_below="@+id/scrollView"
+        android:layout_toRightOf="@+id/scrollView"
+        android:layout_toEndOf="@+id/scrollView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULATE"
+        android:id="@+id/calculateButton"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/mark2"
+        android:layout_alignEnd="@+id/mark2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
