@@ -12,4 +12,37 @@
     tools:context=".MarksCalculator"
     tools:showIn="@layout/activity_markscalculator">
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/mark1"
+        android:layout_toStartOf="@+id/mark1"
+        android:layout_alignBottom="@+id/mark1"
+        android:layout_alignParentRight="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Einführung Informationswissenschaft"
+            android:id="@+id/course1"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+    </ScrollView>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/mark1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:width="75dp" />
+
 </RelativeLayout>
