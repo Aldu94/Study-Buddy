@@ -16,12 +16,12 @@ public class CourseItem implements Comparable<CourseItem>{
         this.rating = rating;
     }
 
-    /* gibt dem User den Namen des CourseItems zurück */
+    /* gibt dem Nutzer den Namen des CourseItems zurück */
     public String getName(){
         return name;
     }
 
-    /* Wenn der User dem CourseItem (Bild) einen Namen geben will, kann er diese Methode aufrufen */
+    /* Wenn der Nutzer dem CourseItem (Bild) einen Namen geben will, kann er diese Methode aufrufen */
     public void setName(String name) {
         this.name = name;
     }
