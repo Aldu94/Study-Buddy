@@ -21,7 +21,7 @@ public class MarksCalculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_markscalculator);
-        Toast.makeText(MarksCalculator.this, "sers" , Toast.LENGTH_SHORT).show();
+        Toast.makeText(MarksCalculator.this, " " , Toast.LENGTH_SHORT).show();
         //calculateMarks();
     }
 

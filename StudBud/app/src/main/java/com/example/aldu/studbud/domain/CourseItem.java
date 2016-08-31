@@ -22,15 +22,13 @@ public class CourseItem implements Comparable<CourseItem>{
     }
 
     /* Wenn der User dem CourseItem (Bild) einen Namen geben will, kann er diese Methode aufrufen */
-    public String setName(String name) {
+    public void setName(String name) {
         this.name = name;
-        return name;
     }
 
     /* Hier lässt sich das Rating des CourseItems speichern, wenn es geändert wurde */
-    public String setRating(String rating){
+    public void setRating(String rating){
         this.rating = rating;
-        return rating;
     }
 
     /* Die Methode gibt den Pfad des CourseItems zurück */

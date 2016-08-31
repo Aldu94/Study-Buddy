@@ -33,14 +33,10 @@ public class MainActivity extends AppCompatActivity {
         onCalculatorClicked();
         onProfileClicked();
         onPreferencesClicked();
-        Log.d("First", "Now open Database");
         db.open();
-        Log.d("Second", "Database is open");
-        db.addCourseItem(INF1);
-        Log.d("Third", "Course Item is added");
-        Log.d("Test"," " + db.getNumberOfImages());
+        //
         db.close();
-        Log.d("Fourth","Database is closed now");
+
 
     }
 
