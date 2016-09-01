@@ -6,11 +6,11 @@ package com.example.aldu.studbud.domain;
 public class ScheduleItem {
 
     private String title;
-    private int startTime;
-    private int endTime;
+    private String startTime;
+    private String endTime;
     private String room;
 
-    public ScheduleItem(String title, int startTime, int endTime, String room){
+    public ScheduleItem(String title, String startTime, String endTime, String room){
         this.title = title;
         this.startTime = startTime;
         this.endTime = endTime;
@@ -24,11 +24,11 @@ public class ScheduleItem {
         return title;
     }
 
-    public int getStartTime(){
+    public String getStartTime(){
         return startTime;
     }
 
-    public int getEndTime(){
+    public String getEndTime(){
         return endTime;
     }
 
@@ -43,11 +43,11 @@ public class ScheduleItem {
         this.title = title;
     }
 
-    public void setStartTime(int startTime){
+    public void setStartTime(String startTime){
         this.startTime = startTime;
     }
 
-    public void setEndTime(int endTime){
+    public void setEndTime(String endTime){
         this.endTime = endTime;
     }
 

@@ -5,6 +5,7 @@
     <string name="title_activity_notenrechner">Marks Calculator</string>
     <string name="title_activity_profil">Profile</string>
     <string name="title_activity_preferences">Preferences</string>
+    <string name="title_activity_result">ResultActivity</string>
 
     <string name="title_schedule_button">Schedule</string>
     <string name="title_calculator_button">Calculator</string>
@@ -16,5 +17,6 @@
     <string name="title_end_time">End time</string>
     <string name="title_add_course">Add</string>
     <string name="title_room">Room</string>
+    <string name="title_result">Your marks</string>
 
 </resources>

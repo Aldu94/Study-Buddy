@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,8 +22,8 @@ public class AddCourseToSchedule extends AppCompatActivity {
     private Button addButton;
 
     private String title;
-    private int timeStart;
-    private int timeEnd;
+    private String timeStart;
+    private String timeEnd;
     private String roomToStudy;
 
 
@@ -31,7 +32,6 @@ public class AddCourseToSchedule extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_course_to_schedule);
         setupUI();
-        readUserInput();
         onAddButtonClicked();
     }
 
@@ -47,6 +47,8 @@ public class AddCourseToSchedule extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                readUserInput();
+                Log.d("Course",title + " is during " + timeStart + " o'clock to " + timeEnd + " in " + roomToStudy);
                 //open database
                 ScheduleItem si = new ScheduleItem(title,timeStart,timeEnd,roomToStudy);
                 //add schedule item to database
@@ -60,8 +62,8 @@ public class AddCourseToSchedule extends AppCompatActivity {
 
     private void readUserInput(){
         title = courseTitle.getText().toString();
-        timeStart = Integer.parseInt(startTime.getText().toString());
-        timeEnd = Integer.parseInt(endTime.getText().toString());
+        timeStart = startTime.getText().toString();
+        timeEnd = endTime.getText().toString();
         roomToStudy = room.getText().toString();
     }
 

@@ -1,11 +1,13 @@
 package com.example.aldu.studbud;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MarksCalculator extends AppCompatActivity {
 
@@ -36,6 +38,7 @@ public class MarksCalculator extends AppCompatActivity {
 
 
     private void readUserInput() {
+        checkForEmptyEditText();
         markOne = Double.parseDouble(editTextOne.getText().toString());
         markTwo = Double.parseDouble(editTextTwo.getText().toString());
         inf01[0] = markOne;
@@ -57,10 +60,21 @@ public class MarksCalculator extends AppCompatActivity {
             public void onClick(View v) {
                 readUserInput();
                 calculator.calculateMarks(subjectID, inf01);
+                Intent resultPageIntent = new Intent(MarksCalculator.this, ResultActivity.class);
+                startActivity(resultPageIntent);
             }
         });
     }
 
+
+    private void checkForEmptyEditText(){
+        if (editTextOne.length() < 1  || editTextTwo.length() < 1){
+            editTextOne.setText("4.0");
+            editTextTwo.setText("4.0");
+            Toast.makeText(MarksCalculator.this, "We calculate the baddest result", Toast.LENGTH_SHORT).show();
+        }
+
+    }
 
 
 }

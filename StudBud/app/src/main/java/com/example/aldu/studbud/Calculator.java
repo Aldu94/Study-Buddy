@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
-import static android.content.Intent.getIntent;
+
 
 
 /**
@@ -22,7 +22,6 @@ public class Calculator {
     private static final String KEY_CHOSEN_MODULE_5 = "INF5";
     private static final String KEY_CHOSEN_MODULE_6 = "INF6";
 
-    private MarksCalculator mc;
 
 
     public double calculateMarks(int subjectID, double[]inf01){

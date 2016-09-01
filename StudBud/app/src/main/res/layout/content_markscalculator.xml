@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -16,22 +16,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/mark1"
         android:layout_toStartOf="@+id/mark1"
         android:layout_alignBottom="@+id/mark1"
-        android:layout_alignParentRight="false">
+        android:layout_alignParentRight="false"
+        android:layout_alignTop="@+id/mark1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Einführung Informationswissenschaft"
-            android:id="@+id/course1"
-            android:textSize="16dp"
-            android:textAlignment="center"
-            android:textStyle="bold" />
     </ScrollView>
 
     <EditText
@@ -40,10 +32,11 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/mark1"
+        android:width="75dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:width="75dp" />
+        android:layout_marginTop="77dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,7 +50,8 @@
         android:layout_toStartOf="@+id/mark1"
         android:layout_marginTop="15dp"
         android:layout_alignBottom="@+id/mark2"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="16dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -78,6 +72,18 @@
         android:layout_centerVertical="true"
         android:layout_alignRight="@+id/mark2"
         android:layout_alignEnd="@+id/mark2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Einführung Informationswissenschaft"
+        android:id="@+id/course1"
+        android:textSize="16dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_above="@+id/course2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
