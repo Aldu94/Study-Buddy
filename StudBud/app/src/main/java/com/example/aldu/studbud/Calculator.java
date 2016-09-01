@@ -25,7 +25,7 @@ public class Calculator {
     private MarksCalculator mc;
 
 
-    public double calculateMarks(int subjectID, double inf01){
+    public double calculateMarks(int subjectID, double[]inf01){
         if(subjectID == INFWISS_ID){
             return calculateInfwissAsMainSubject(inf01);
         }
@@ -34,7 +34,7 @@ public class Calculator {
         }
     }
 
-    private double calculateInfwissAsMainSubject(double inf01){
+    private double calculateInfwissAsMainSubject(double[] inf01){
         DecimalFormat df = new DecimalFormat("#0.0");
         double markBachelorInfWiss = 4.0;
 
@@ -54,7 +54,7 @@ public class Calculator {
         return finalMark;
     }
 
-    private double calculateMedInfoAsMainSubject(double inf01) {
+    private double calculateMedInfoAsMainSubject(double[] inf01) {
         DecimalFormat df = new DecimalFormat("#0.0");
         double markBachelorMedInfo = 4.0;
 
@@ -71,7 +71,7 @@ public class Calculator {
         return finalMark;
     }
 
-    private double calculateInfWissAsSecondSubject(double inf01){
+    private double calculateInfWissAsSecondSubject(double[] inf01){
         String chosenModuleOne = "INF4";
         String chosenModuleTwo = "INF5";
         double inf1 = calculateInfwissM01(inf01) * 0.25;
@@ -122,12 +122,14 @@ public class Calculator {
         return mark;
     }
 
-    private double calculateInfwissM01(double inf01){
 
-        double markInf11 = inf01 * 0.5;
-        double markInf12 = inf01 * 0.5;
-        Log.d("INF01",String.valueOf(markInf11));
-        return markInf11 + markInf12;
+    private double calculateInfwissM01(double[] inf01){
+
+        double markInf11 = inf01[0] * 0.5;
+        double markInf12 = inf01[1] * 0.5;
+        Log.d("INF01", String.valueOf(markInf11 + markInf12));
+        double finalInfM01 = markInf11 + markInf12;
+        return finalInfM01;
     }
 
     private double calculateInfwissM02(){
@@ -176,6 +178,5 @@ public class Calculator {
     private double calculateMediInfoM10(){
         return 1.0;
     }
-
 
 }
