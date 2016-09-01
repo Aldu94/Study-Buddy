@@ -10,9 +10,9 @@ public class CourseItem implements Comparable<CourseItem>{
     private String path;
     private String status;
 
-    public CourseItem(String name, String path, String rating){
+    public CourseItem(String name, String status, String rating){
         this.name = name;
-        this.path = path;
+        this.path = status;
         this.rating = rating;
     }
 
@@ -21,7 +21,7 @@ public class CourseItem implements Comparable<CourseItem>{
         return name;
     }
 
-    /* Wenn der Nutzer dem CourseItem (Bild) einen Namen geben will, kann er diese Methode aufrufen */
+    /* Wenn der Nutzer dem CourseItem einen Namen geben will, kann er diese Methode aufrufen */
     public void setName(String name) {
         this.name = name;
     }
@@ -29,11 +29,6 @@ public class CourseItem implements Comparable<CourseItem>{
     /* Hier lässt sich das Rating des CourseItems speichern, wenn es geändert wurde */
     public void setRating(String rating){
         this.rating = rating;
-    }
-
-    /* Die Methode gibt den Pfad des CourseItems zurück */
-    public String getPath(){
-        return path;
     }
 
     /* Die methode gibt das aktuelle Rating des Courseitem zurück */

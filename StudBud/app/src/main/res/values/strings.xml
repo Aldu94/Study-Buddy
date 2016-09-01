@@ -15,5 +15,6 @@
     <string name="title_start_time">Start time</string>
     <string name="title_end_time">End time</string>
     <string name="title_add_course">Add</string>
+    <string name="title_room">Room</string>
 
 </resources>
