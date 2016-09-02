@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -20,63 +20,61 @@
         android:id="@+id/headLine"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        app:layout_marginTopPercent="4%"
         android:textAlignment="center"
         android:textColor="#050505"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:layout_weight="0"
         android:background="#1abc9c" />
-    <TableLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:stretchColumns="*"
-        android:paddingTop="60dp"
-        >
-<TableRow>
 
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="175dp"
-            android:layout_weight="0.5"
-            android:text="@string/title_schedule_button"
-            android:id="@+id/schedule_button"
-            android:background="@drawable/rounded_button"
-            android:layout_margin="5dp" />
     <Button
-        android:layout_width="0dp"
-        android:layout_height="175dp"
-        android:layout_weight="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_profile_button"
+        android:id="@+id/profile_button"
+        android:background="@drawable/rounded_button"
+        app:layout_widthPercent ="45%"
+        app:layout_heightPercent ="30%"
+        android:layout_alignTop="@+id/preferences_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_schedule_button"
+        android:id="@+id/schedule_button"
+        android:background="@drawable/rounded_button"
+        app:layout_widthPercent ="45%"
+        app:layout_heightPercent ="30%"
+        android:layout_alignTop="@+id/calculator_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/title_preferences_button"
+    android:id="@+id/preferences_button"
+    android:background="@drawable/rounded_button"
+        app:layout_widthPercent ="45%"
+        app:layout_heightPercent ="30%"
+        app:layout_marginTopPercent ="2%"
+        android:layout_below="@+id/schedule_button"
+        android:layout_alignLeft="@+id/calculator_button"
+        android:layout_alignStart="@+id/calculator_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/title_calculator_button"
         android:id="@+id/calculator_button"
         android:background="@drawable/rounded_button"
-        android:layout_margin="5dp" />
-</TableRow>
-        <TableRow>
+        app:layout_widthPercent ="45%"
+        app:layout_heightPercent ="30%"
+        app:layout_marginTopPercent ="10%"
+        android:layout_below="@+id/headLine"
+        android:layout_alignRight="@+id/headLine"
+        android:layout_alignEnd="@+id/headLine" />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="175dp"
-                android:layout_weight="0.5"
-                android:text="@string/title_profile_button"
-                android:id="@+id/profile_button"
-                android:background="@drawable/rounded_button"
-                android:layout_margin="5dp" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="175dp"
-            android:layout_weight="0.5"
-            android:text="@string/title_preferences_button"
-            android:id="@+id/preferences_button"
-            android:background="@drawable/rounded_button"
-            android:layout_margin="5dp" />
-
-
-        </TableRow>
-
-    </TableLayout>
-
-</LinearLayout>
+</android.support.percent.PercentRelativeLayout>

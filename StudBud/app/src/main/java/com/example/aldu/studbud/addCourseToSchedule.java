@@ -8,8 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.example.aldu.studbud.domain.ScheduleItem;
 
@@ -19,7 +21,10 @@ public class AddCourseToSchedule extends AppCompatActivity {
     private EditText startTime;
     private EditText endTime;
     private EditText room;
+    private Spinner daySpinner;
     private Button addButton;
+
+    private ArrayAdapter<CharSequence> spinnerAdapter;
 
     private String title;
     private String timeStart;
@@ -40,7 +45,14 @@ public class AddCourseToSchedule extends AppCompatActivity {
         startTime = (EditText)findViewById(R.id.start_time_text);
         endTime = (EditText)findViewById(R.id.end_time_text);
         room = (EditText)findViewById(R.id.room_text);
+        daySpinner = (Spinner)findViewById(R.id.day_spinner);
         addButton = (Button)findViewById(R.id.add_course_button);
+
+        spinnerAdapter = ArrayAdapter.createFromResource(this,
+                R.array.days_array, android.R.layout.simple_spinner_item);
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        daySpinner.setAdapter(spinnerAdapter);
+
     }
 
     private void onAddButtonClicked(){
