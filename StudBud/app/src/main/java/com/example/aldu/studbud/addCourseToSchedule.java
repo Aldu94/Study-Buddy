@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,11 +61,11 @@ public class AddCourseToSchedule extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 readUserInput();
-                Log.d("Course",title + " is during " + timeStart + " o'clock to " + timeEnd + " in " + roomToStudy);
+                Log.d("Course", title + " is during " + timeStart + " o'clock to " + timeEnd + " in " + roomToStudy);
                 //open database
-                ScheduleItem si = new ScheduleItem(title,timeStart,timeEnd,roomToStudy);
+                ScheduleItem si = new ScheduleItem(title, timeStart, timeEnd, roomToStudy);
                 //add schedule item to database
-                Intent i = new Intent(AddCourseToSchedule.this,Schedule.class);
+                Intent i = new Intent(AddCourseToSchedule.this, Schedule.class);
                 //put extra to intent
                 startActivity(i);
                 //close database
@@ -78,5 +79,16 @@ public class AddCourseToSchedule extends AppCompatActivity {
         timeEnd = endTime.getText().toString();
         roomToStudy = room.getText().toString();
     }
+
+    public void onItemSelected(AdapterView<?> parent, View view,
+                               int pos, long id) {
+        // An item was selected. You can retrieve the selected item using
+        // parent.getItemAtPosition(pos)
+    }
+
+    public void onNothingSelected(AdapterView<?> parent) {
+        // Another interface callback
+    }
+
 
 }
